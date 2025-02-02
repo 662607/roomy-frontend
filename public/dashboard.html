@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .top_panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 10px 20px;
+            background-color:#6a5a91; 
+            color: white; 
+
+            p {
+                margin: 0
+            }
+
+            a {
+                color: white; 
+                text-decoration: none; 
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+       
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start; 
+            padding: 20px;
+        }
+
+        .expense_list {
+            background: white;
+            width: 350px;
+            height: auto;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .chart {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "top_panel">
+        <p id="welcome_message">Welcome, username</p>
+        <p><a href="login.html">Logout</a></p>
+    </div>
+    
+    <div class = "content">
+        <div class = "expense_list">
+            <h4 style="color:#424143;">Expenses</h4>
+            <ul id="expenses">
+            </ul>
+        </div>
+        <div class = "chart">
+            <canvas id="myPieChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    <script>
+        const username = localStorage.getItem('username');
+        document.getElementById('welcome_message').textContent = `Welcome, ${username}`;
+
+        const ctx = document.getElementById("myPieChart").getContext("2d");
+
+        const data = {
+            labels: ["User1", "User2", "User3"],
+            datasets: [{
+                data: [30, 40, 30],
+                backgroundColor: ["#ea6d97", "#76b5c5", "#ffce56"],
+            }]
+        };
+
+        new Chart(ctx, {
+            type: "pie",
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

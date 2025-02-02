@@ -1,0 +1,35 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+img {
+    margin-bottom: 40px; 
+}
+
+button {
+    padding: 10px;
+    margin: 6px;
+    width: 50%;
+    background: #6a5a91;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #847190;
+}
+
+p a {
+    font-size: 14px;
+    color: #3d578f;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

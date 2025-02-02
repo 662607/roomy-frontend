@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roomy - Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+        }
+        .login_box {
+            background: white;
+            width: 350px;
+            height: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+
+            input {
+                display: block;
+                margin: 10px auto;
+                padding: 8px;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src = "logo.png" style = "height:50px"> 
+    <div class="login_box">
+        <h2 style="color:#3c3d3c;">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button style = "background-color: #327113" onclick="sign_up()">Sign up</button>
+        <p><a href="forgot_password.html">Forgot Password</a></p>
+    </div>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "roomy" && password == "123") {
+                localStorage.setItem('username', username);
+                window.location.href = "dashboard.html";
+            } 
+            else {
+                alert("Invalid username or password entered");
+            }
+        }
+        function sign_up() {
+            window.location.href = "signup.html";
+        }
+    </script>
+</body>
+</html>
