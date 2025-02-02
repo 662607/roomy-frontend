@@ -1,0 +1,30 @@
+body {
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .signup_box {
+            flex: 1;
+            background: white;
+            width: 400px;
+            height: auto;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .signup_content {
+            text-align: left;
+            input {
+                display: block;
+                margin: 10px auto;
+                padding: 8px;
+                width: 90%;
+                margin-left: 0px;
+            }
+        }
+        .logo_container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }

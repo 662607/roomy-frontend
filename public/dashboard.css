@@ -1,0 +1,45 @@
+.top_panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color:#6a5a91;
+            color: white;
+
+            p {
+                margin: 0
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .expense_list {
+            background: white;
+            width: 350px;
+            height: auto;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .chart {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }

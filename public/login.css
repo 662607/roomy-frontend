@@ -1,0 +1,19 @@
+body {
+            justify-content: center;
+            align-items: center;
+        }
+        .login_box {
+            background: white;
+            width: 350px;
+            height: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+
+            input {
+                display: block;
+                margin: 10px auto;
+                padding: 8px;
+                width: 80%;
+            }
+        }

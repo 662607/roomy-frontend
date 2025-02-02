@@ -5,38 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roomy - Sign up</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-        .signup_box {
-            flex: 1;
-            background: white;
-            width: 400px;
-            height: auto;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .signup_content {
-            text-align: left;
-            input {
-                display: block;
-                margin: 10px auto;
-                padding: 8px;
-                width: 90%;
-                margin-left: 0px;
-            }
-        }
-        .logo_container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <div class="logo_container">
@@ -59,10 +28,10 @@
             <input type="text" id="username">
             
             <p>Enter a password:</p>
-            <input type="password" id="password">
+            <input type="password" id="password1">
 
             <p>Re-enter your password:</p>
-            <input type="password" id="password">
+            <input type="password" id="password2">
 
         </div>
 
@@ -70,7 +39,7 @@
     </div>
     <script>
         function sign_up() {
-            window.location.href = "dashboard.html";
+            window.location.href = "/dashboard";
         }
     </script>
 </body>
